@@ -1,0 +1,208 @@
+:root {
+    --main-color: #9664ff;
+    --secondary-color: #eaa75f;
+    --text-color: #fdfcfa;
+    --background-color: #000000;
+    --border-color: #9664ff;
+}
+
+@font-face {
+    font-family: "Minecraftia";
+    src: url("Minecraftia.otf");
+}
+
+body {
+    background-color: var(--background-color);
+    main {
+        color: var(--text-color);
+        .heading {
+            padding: 2vw 15vw;
+
+            text-align: center;
+            border: none;
+        }
+
+        .main_window {
+            border-top: 5px solid var(--border-color);
+            border-bottom: 5px solid var(--border-color);
+            display: grid;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            row-gap: 2vw;
+            img {
+                border-radius: 0;
+                width: 20vw;
+            }
+            p {
+                text-align: justify;
+                padding: 0 2vw;
+            }
+
+            #canvas_game {
+                width: 40vw;
+                height: 23vw;
+            }
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2vw;
+            padding: 2vw;
+            padding-top: 0;
+
+            .game_window {
+                border: 5px solid var(--border-color);
+                //margin: 0 10vw;
+                //margin-bottom: 2vw;
+                background-color: var(--background-color);
+                display: grid;
+                grid-template-rows: 0.2fr 3fr 1.5fr;
+
+                .game_text {
+                    padding: 2vw;
+                    border-top: 5px solid var(--border-color);
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    img {
+                        border: 5px solid var(--border-color);
+                        width: 20vw;
+                    }
+
+                    div {
+                        margin: auto 0;
+                        padding-left: 2vw;
+
+                        h2 {
+                            text-align: center;
+                            margin-bottom: 1vw;
+                            -webkit-text-stroke: 0.05vw var(--secondary-color);
+                        }
+                        p {
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .window_buttons {
+                    display: flex;
+                    justify-content: flex-end;
+                    text-align: center;
+
+                    p {
+                        border: 5px solid var(--border-color);
+                        background-color: var(--border-color);
+                        color: var(--background-color);
+                        margin: 0.2vw;
+                        width: 1vw;
+                    }
+
+                    .min::after {
+                        content: "_";
+                    }
+
+                    .min:hover::after {
+                        content: ":)";
+                    }
+
+                    .close::after {
+                        content: "X";
+                    }
+
+                    .close:hover::after {
+                        content: ":)";
+                    }
+                }
+
+                .advert {
+                    border-top: 5px solid var(--border-color);
+                    padding: 2vw;
+
+                    p {
+                        text-align: center;
+                        margin-bottom: 2vw;
+                    }
+
+                    .icons {
+                        display: flex;
+                        justify-content: space-around;
+                        margin: 0 8vw;
+
+                        i {
+                            font-size: 3vw;
+                            color: var(--main-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        aside {
+            background-color: var(--background-color);
+            border-top: 5px solid var(--border-color);
+            border-bottom: 5px solid var(--border-color);
+            text-align: center;
+        }
+    }
+
+    footer {
+        background-color: var(--background-color);
+    }
+
+    canvas {
+        background-color: var(--background-color);
+        border: 5px solid var(--border-color);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        canvas {
+            border-width: 3px;
+        }
+
+        main {
+            .games {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin: 0 14vw;
+                .game_window {
+                    border-width: 3px;
+                    display: grid;
+                    grid-template-rows: 0.2fr 3fr 1fr;
+                    .advert {
+                        border-width: 3px;
+                        .icons {
+                            i {
+                                font-size: 4vw;
+                            }
+                        }
+                    }
+                    .game_text {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 2vw;
+                        justify-items: center;
+                        border-width: 3px;
+                        img {
+                            border-width: 3px;
+                            width: 40vw;
+                        }
+                    }
+                    .window_buttons {
+                        p {
+                            font-size: 1vw;
+                        }
+                    }
+                }
+            }
+            .main_window {
+                border-width: 3px;
+            }
+            aside {
+                border-width: 3px;
+            }
+        }
+    }
+}

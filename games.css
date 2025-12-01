@@ -1,0 +1,175 @@
+:root {
+  --main-color: #9664ff;
+  --secondary-color: #eaa75f;
+  --text-color: #fdfcfa;
+  --background-color: #000000;
+  --border-color: #9664ff;
+}
+
+@font-face {
+  font-family: "Minecraftia";
+  src: url("Minecraftia.otf");
+}
+body {
+  background-color: var(--background-color);
+}
+body main {
+  color: var(--text-color);
+}
+body main .heading {
+  padding: 2vw 15vw;
+  text-align: center;
+  border: none;
+}
+body main .main_window {
+  border-top: 5px solid var(--border-color);
+  border-bottom: 5px solid var(--border-color);
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  row-gap: 2vw;
+}
+body main .main_window img {
+  border-radius: 0;
+  width: 20vw;
+}
+body main .main_window p {
+  text-align: justify;
+  padding: 0 2vw;
+}
+body main .main_window #canvas_game {
+  width: 40vw;
+  height: 23vw;
+}
+body main .games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+  padding: 2vw;
+  padding-top: 0;
+}
+body main .games .game_window {
+  border: 5px solid var(--border-color);
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-rows: 0.2fr 3fr 1.5fr;
+}
+body main .games .game_window .game_text {
+  padding: 2vw;
+  border-top: 5px solid var(--border-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+body main .games .game_window .game_text img {
+  border: 5px solid var(--border-color);
+  width: 20vw;
+}
+body main .games .game_window .game_text div {
+  margin: auto 0;
+  padding-left: 2vw;
+}
+body main .games .game_window .game_text div h2 {
+  text-align: center;
+  margin-bottom: 1vw;
+  -webkit-text-stroke: 0.05vw var(--secondary-color);
+}
+body main .games .game_window .game_text div p {
+  margin: auto;
+}
+body main .games .game_window .window_buttons {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+body main .games .game_window .window_buttons p {
+  border: 5px solid var(--border-color);
+  background-color: var(--border-color);
+  color: var(--background-color);
+  margin: 0.2vw;
+  width: 1vw;
+}
+body main .games .game_window .window_buttons .min::after {
+  content: "_";
+}
+body main .games .game_window .window_buttons .min:hover::after {
+  content: ":)";
+}
+body main .games .game_window .window_buttons .close::after {
+  content: "X";
+}
+body main .games .game_window .window_buttons .close:hover::after {
+  content: ":)";
+}
+body main .games .game_window .advert {
+  border-top: 5px solid var(--border-color);
+  padding: 2vw;
+}
+body main .games .game_window .advert p {
+  text-align: center;
+  margin-bottom: 2vw;
+}
+body main .games .game_window .advert .icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 8vw;
+}
+body main .games .game_window .advert .icons i {
+  font-size: 3vw;
+  color: var(--main-color);
+}
+body main aside {
+  background-color: var(--background-color);
+  border-top: 5px solid var(--border-color);
+  border-bottom: 5px solid var(--border-color);
+  text-align: center;
+}
+body footer {
+  background-color: var(--background-color);
+}
+body canvas {
+  background-color: var(--background-color);
+  border: 5px solid var(--border-color);
+}
+
+@media screen and (max-width: 780px) {
+  body canvas {
+    border-width: 3px;
+  }
+  body main .games {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 14vw;
+  }
+  body main .games .game_window {
+    border-width: 3px;
+    display: grid;
+    grid-template-rows: 0.2fr 3fr 1fr;
+  }
+  body main .games .game_window .advert {
+    border-width: 3px;
+  }
+  body main .games .game_window .advert .icons i {
+    font-size: 4vw;
+  }
+  body main .games .game_window .game_text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    justify-items: center;
+    border-width: 3px;
+  }
+  body main .games .game_window .game_text img {
+    border-width: 3px;
+    width: 40vw;
+  }
+  body main .games .game_window .window_buttons p {
+    font-size: 1vw;
+  }
+  body main .main_window {
+    border-width: 3px;
+  }
+  body main aside {
+    border-width: 3px;
+  }
+}/*# sourceMappingURL=games.css.map */

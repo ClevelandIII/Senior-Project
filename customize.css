@@ -1,0 +1,207 @@
+:root {
+  --main-color: #9664ff;
+  --secondary-color: #eaa75f;
+  --text-color: #fdfcfa;
+  --background-color: #000000;
+  --border-color: #9664ff;
+}
+
+@font-face {
+  font-family: "Minecraftia";
+  src: url("Minecraftia.otf");
+}
+body main .main_window {
+  border-bottom: none;
+  padding: 2vw;
+}
+body main .main_window .settings {
+  border: 5px solid var(--border-color);
+  padding: 2vw;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+body main .main_window .settings .accent_color {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1vw;
+  margin-bottom: 2vw;
+}
+body main .main_window .settings .accent_color .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 2vw;
+       column-gap: 2vw;
+  row-gap: 2vw;
+}
+body main .main_window .settings .accent_color .options button {
+  background-color: var(--background-color);
+  padding: 1vw;
+  font-family: "Minecraftia", sans-serif;
+}
+body main .main_window .settings .accent_color .options #purple {
+  border: 5px solid #9664ff;
+  color: var(--text-color);
+}
+body main .main_window .settings .accent_color .options #purple:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .accent_color .options #white {
+  border: 5px solid #fdfcfa;
+  color: var(--text-color);
+}
+body main .main_window .settings .accent_color .options #white:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .accent_color .options #yellow {
+  border: 5px solid #fefc6f;
+  color: var(--text-color);
+}
+body main .main_window .settings .accent_color .options #yellow:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .accent_color .options #alula-color {
+  border: 5px solid #4374ff;
+  color: var(--text-color);
+}
+body main .main_window .settings .accent_color .options #alula-color:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .accent_color .options #niko-color {
+  border: 5px solid #6a1e40;
+  color: var(--text-color);
+}
+body main .main_window .settings .accent_color .options #niko-color:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .accent_color .options #calamus-color {
+  border: 5px solid #9f1a32;
+  color: var(--text-color);
+}
+body main .main_window .settings .accent_color .options #calamus-color:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .characters {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1vw;
+}
+body main .main_window .settings .characters .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 2vw;
+       column-gap: 2vw;
+}
+body main .main_window .settings .characters .options button {
+  background-color: var(--background-color);
+  border: 5px solid var(--border-color);
+  padding: 1vw;
+  color: var(--text-color);
+  font-family: "Minecraftia", sans-serif;
+}
+body main .main_window .settings .characters .options #niko:hover {
+  border: 5px solid var(--secondary-color);
+}
+body main .main_window .settings .characters .options #alula:hover {
+  border: 5px solid var(--secondary-color);
+}
+
+@media screen and (max-width: 780px) {
+  body h2 {
+    font-size: 2.5vw;
+  }
+  body main .games {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 14vw;
+  }
+  body main .games .game_window {
+    border-width: 3px;
+    display: grid;
+    grid-template-rows: 0.2fr 3fr 1fr;
+  }
+  body main .games .game_window .advert {
+    border-width: 3px;
+  }
+  body main .games .game_window .advert .icons i {
+    font-size: 4vw;
+  }
+  body main .games .game_window .game_text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    justify-items: center;
+    border-width: 3px;
+  }
+  body main .games .game_window .game_text img {
+    border-width: 3px;
+    width: 30vw;
+  }
+  body main .games .game_window .game_text h3 {
+    text-align: center;
+    font-size: 1.8vw;
+  }
+  body main .games .game_window .window_buttons p {
+    font-size: 1vw;
+  }
+  body main .main_window {
+    border-width: 3px;
+  }
+  body main .main_window .settings {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #yellow {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #yellow:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #purple {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #purple:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #white {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #white:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #alula-color {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #alula-color:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #niko-color {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #niko-color:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #calamus-color {
+    border-width: 3px;
+  }
+  body main .main_window .settings .accent_color .options #calamus-color:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .characters .options #niko {
+    border-width: 3px;
+  }
+  body main .main_window .settings .characters .options #niko:hover {
+    border-width: 3px;
+  }
+  body main .main_window .settings .characters .options #alula {
+    border-width: 3px;
+  }
+  body main .main_window .settings .characters .options #alula:hover {
+    border-width: 3px;
+  }
+  body main aside {
+    border-width: 3px;
+  }
+  body main #contact {
+    border-width: 3px;
+  }
+}/*# sourceMappingURL=customize.css.map */

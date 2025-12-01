@@ -1,0 +1,488 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: unset;
+}
+
+/***************************************************************************************/
+:root {
+    --main-color: #9664ff;
+    --secondary-color: #eaa75f;
+    --text-color: #fdfcfa;
+    --background-color: #000000;
+    --border-color: #9664ff;
+}
+
+@font-face {
+    font-family: "Minecraftia";
+    src: url("Minecraftia.otf");
+}
+body {
+    font-family: "Minecraftia", sans-serif;
+    border: 5px solid var(--border-color);
+    background-color: var(--background-color);
+    cursor: url(images/cursor_xl.png), auto;
+}
+body a,
+body button {
+    cursor: url(images/point_xl.png), auto;
+}
+body button:not(:disabled) {
+    cursor: url(images/point_xl.png), auto;
+}
+body h1 {
+    color: var(--text-color);
+    font-size: 3vw;
+    -webkit-text-stroke: 0.75px var(--secondary-color);
+}
+body h2 {
+    color: var(--text-color);
+    font-size: 2vw;
+    -webkit-text-stroke: 0.6px var(--secondary-color);
+}
+body h3 {
+    color: var(--text-color);
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+body h4 {
+    color: var(--main-color);
+    font-size: 1vw;
+}
+body .large {
+    text-align: center;
+    font-size: larger;
+    -webkit-text-stroke: 0.5px var(--secondary-color);
+}
+body p,
+body a {
+    font-size: 1vw;
+}
+body header {
+    border-bottom: 5px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-decoration: none;
+}
+body header .window_buttons {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+body header .window_buttons p {
+    border: 5px solid var(--border-color);
+    background-color: var(--border-color);
+    color: var(--background-color);
+    margin: 0.2vw;
+    width: 1vw;
+}
+body header .window_buttons .min::after {
+    content: "_";
+}
+body header .window_buttons .min:hover::after {
+    content: ":)";
+}
+body header .window_buttons .close::after {
+    content: "X";
+}
+body header .window_buttons .close:hover::after {
+    content: ":)";
+}
+body header nav {
+    border-top: 5px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    padding: 0.5vw 0;
+}
+body header nav a {
+    text-align: center;
+}
+body header nav a img {
+    width: 10vw;
+    margin: 0 auto;
+}
+body header nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+body header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+body main .hero {
+    width: 100%;
+    height: 50vw;
+    background: url("images/niko_boat.png");
+    background-size: contain;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+body main .hero .promo {
+    padding-left: 20%;
+    display: grid;
+    grid-template-rows: 10fr 9fr;
+    row-gap: 4.5vw;
+}
+body main .hero .promo #image {
+    display: grid;
+    align-items: end;
+    justify-content: center;
+}
+body main .hero .promo #image img {
+    width: 40vw;
+}
+body main .hero .promo #text {
+    display: grid;
+    align-items: start;
+    justify-content: center;
+}
+body main aside {
+    background-color: var(--background-color);
+    border-top: 5px solid var(--border-color);
+    border-bottom: 5px solid var(--border-color);
+    padding: 2vw 15vw;
+    text-align: center;
+}
+body main .hero_2 {
+    width: 100%;
+    height: 54.5vw;
+    background: url("images/Promo_1.jpg");
+    background-size: contain;
+}
+body main .hero_2 .features {
+    color: var(--text-color);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+body main .hero_2 .features h2 {
+    margin: 0 3vw;
+    font-size: 2vw;
+    -webkit-text-stroke: 0;
+}
+body main .hero_2 .features h2 strong {
+    font-weight: bolder;
+    -webkit-text-stroke: 0.1px var(--secondary-color);
+}
+body main .hero_2 .features #review_one {
+    margin-bottom: 15vw;
+    text-align: left;
+}
+body main .hero_2 .features #review_two {
+    display: grid;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    text-align: end;
+    padding-top: 15vw;
+}
+body main .carousel {
+    color: var(--text-color);
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2vw;
+    height: 22vw;
+}
+body main .carousel .slick-track {
+    display: flex;
+    align-items: center;
+}
+body main .carousel .buttons {
+    display: grid;
+    grid-template-columns: 1fr 22fr 1fr;
+    -moz-column-gap: 1vw;
+    column-gap: 1vw;
+    align-items: center;
+    width: 100%;
+    height: 14vw;
+}
+body main .carousel .buttons #previous,
+body main .carousel .buttons #next {
+    color: var(--main-color);
+    height: 2vw;
+    width: 2vw;
+    font-size: 1.5vw;
+    margin: 0 auto;
+}
+body main .carousel .buttons #previous {
+    margin-left: 6vw;
+}
+body main .carousel .buttons #next {
+    margin-right: 6vw;
+}
+body main .carousel .buttons .main_image {
+    width: 74vw;
+    margin-bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+body main .carousel .buttons .main_image img {
+    transition: width 1s;
+    width: 20vw;
+    border: 5px solid var(--border-color);
+    margin: 0 auto;
+}
+body main .carousel .buttons .main_image .slick-current img {
+    transition: width 1s;
+    width: 24vw;
+}
+body main .carousel p {
+    width: 35vw;
+    text-align: center;
+}
+body main #news {
+    background-color: var(--background-color);
+    padding: 2vw;
+    color: var(--text-color);
+    text-align: left;
+}
+body main #news h2 {
+    margin-bottom: 2vw;
+    text-align: center;
+}
+body main #news #news_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+}
+body main #news #news_boxes h3 {
+    text-align: center;
+}
+body main #news #news_boxes a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+body main #news #news_boxes a .news_module {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 5px solid var(--border-color);
+    padding: 2vw;
+    align-items: center;
+}
+body main #news #news_boxes a .news_module img {
+    border: 5px solid var(--border-color);
+    max-height: 10vw;
+}
+body main #news #news_boxes a .news_module .text_module {
+    padding-left: 2vw;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    gap: 1vw;
+}
+body main #news #news_boxes a .news_module .text_module .body_news {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+body main #news #news_boxes a .news_module:hover {
+    border: 5px solid var(--secondary-color);
+}
+body footer {
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2vw;
+}
+body footer p {
+    margin-bottom: 2vw;
+}
+body footer img {
+    width: 5%;
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        border-width: 3px;
+    }
+    body h1 {
+        -webkit-text-stroke: 0.6px var(--secondary-color);
+    }
+    body h2 {
+        -webkit-text-stroke: 0.3px var(--secondary-color);
+    }
+    body h4,
+    body p,
+    body a {
+        font-size: 1.5vw;
+    }
+    body header {
+        border-width: 3px;
+    }
+    body header .window_buttons p {
+        font-size: 1vw;
+    }
+    body header nav {
+        border-width: 3px;
+    }
+    body main .hero_2 .features h2 strong {
+        -webkit-text-stroke: 0.05px var(--secondary-color);
+    }
+    body main aside {
+        border-width: 3px;
+    }
+    body main .carousel {
+        height: 26vw;
+    }
+    body main .carousel .buttons #next {
+        font-size: 2vw;
+    }
+    body main .carousel .buttons .main_image img {
+        border-width: 3px;
+    }
+    body main #news #news_boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 14vw;
+    }
+    body main #news #news_boxes a .news_module {
+        border-width: 3px;
+    }
+    body main #news #news_boxes a .news_module img {
+        border-width: 3px;
+    }
+    body main #news #news_boxes a .news_module:hover {
+        border-width: 3px;
+    }
+} /*# sourceMappingURL=style.css.map */

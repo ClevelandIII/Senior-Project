@@ -1,0 +1,240 @@
+:root {
+    --main-color: #9664ff;
+    --secondary-color: #eaa75f;
+    --text-color: #fdfcfa;
+    --background-color: #000000;
+    --border-color: #9664ff;
+}
+
+@font-face {
+    font-family: "Minecraftia";
+    src: url("Minecraftia.otf");
+}
+
+body {
+    main {
+        .main_window {
+            border-bottom: none;
+            padding: 2vw;
+
+            .settings {
+                border: 5px solid var(--border-color);
+                padding: 2vw;
+                width: 60vw;
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .accent_color {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    row-gap: 1vw;
+                    margin-bottom: 2vw;
+
+                    .options {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        column-gap: 2vw;
+                        row-gap: 2vw;
+
+                        button {
+                            background-color: var(--background-color);
+                            padding: 1vw;
+                            font-family: "Minecraftia", sans-serif;
+                        }
+
+                        #purple {
+                            border: 5px solid #9664ff;
+                            color: var(--text-color);
+                        }
+                        #purple:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+
+                        #white {
+                            border: 5px solid #fdfcfa;
+                            color: var(--text-color);
+                        }
+                        #white:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+
+                        #yellow {
+                            border: 5px solid #fefc6f;
+                            color: var(--text-color);
+                        }
+                        #yellow:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+
+                        #alula-color {
+                            border: 5px solid #4374ff;
+                            color: var(--text-color);
+                        }
+                        #alula-color:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+
+                        #niko-color {
+                            border: 5px solid #6a1e40;
+                            color: var(--text-color);
+                        }
+                        #niko-color:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+
+                        #calamus-color {
+                            border: 5px solid #9f1a32;
+                            color: var(--text-color);
+                        }
+                        #calamus-color:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+                    }
+                }
+
+                .characters {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    row-gap: 1vw;
+
+                    .options {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 2vw;
+
+                        button {
+                            background-color: var(--background-color);
+                            border: 5px solid var(--border-color);
+                            padding: 1vw;
+                            color: var(--text-color);
+                            font-family: "Minecraftia", sans-serif;
+                        }
+                        #niko:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+                        #alula:hover {
+                            border: 5px solid var(--secondary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        h2 {
+            font-size: 2.5vw;
+        }
+
+        main {
+            .games {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin: 0 14vw;
+                .game_window {
+                    border-width: 3px;
+                    display: grid;
+                    grid-template-rows: 0.2fr 3fr 1fr;
+                    .advert {
+                        border-width: 3px;
+                        .icons {
+                            i {
+                                font-size: 4vw;
+                            }
+                        }
+                    }
+                    .game_text {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 2vw;
+                        justify-items: center;
+                        border-width: 3px;
+                        img {
+                            border-width: 3px;
+                            width: 30vw;
+                        }
+                        h3 {
+                            text-align: center;
+                            font-size: 1.8vw;
+                        }
+                    }
+                    .window_buttons {
+                        p {
+                            font-size: 1vw;
+                        }
+                    }
+                }
+            }
+            .main_window {
+                border-width: 3px;
+                .settings {
+                    border-width: 3px;
+                    .accent_color {
+                        .options {
+                            #yellow {
+                                border-width: 3px;
+                            }
+                            #yellow:hover {
+                                border-width: 3px;
+                            }
+                            #purple {
+                                border-width: 3px;
+                            }
+                            #purple:hover {
+                                border-width: 3px;
+                            }
+                            #white {
+                                border-width: 3px;
+                            }
+                            #white:hover {
+                                border-width: 3px;
+                            }
+                            #alula-color {
+                                border-width: 3px;
+                            }
+                            #alula-color:hover {
+                                border-width: 3px;
+                            }
+                            #niko-color {
+                                border-width: 3px;
+                            }
+                            #niko-color:hover {
+                                border-width: 3px;
+                            }
+                            #calamus-color {
+                                border-width: 3px;
+                            }
+                            #calamus-color:hover {
+                                border-width: 3px;
+                            }
+                        }
+                    }
+                    .characters {
+                        .options {
+                            #niko {
+                                border-width: 3px;
+                            }
+                            #niko:hover {
+                                border-width: 3px;
+                            }
+                            #alula {
+                                border-width: 3px;
+                            }
+                            #alula:hover {
+                                border-width: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            aside {
+                border-width: 3px;
+            }
+            #contact {
+                border-width: 3px;
+            }
+        }
+    }
+}
